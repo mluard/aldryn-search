@@ -12,7 +12,7 @@ REQUIREMENTS = [
     'django-haystack>=2.0.0',
     'django-spurl',
     'django-standard-form',
-    'aldryn-common>=1.0.2',
+    # 'aldryn-common>=1.0.2',
 ]
 
 

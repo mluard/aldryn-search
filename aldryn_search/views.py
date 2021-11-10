@@ -3,7 +3,8 @@ from django.utils.translation import get_language_from_request
 from django.views.generic import ListView
 from django.views.generic.edit import FormMixin
 
-from aldryn_common.paginator import DiggPaginator
+# from aldryn_common.paginator import DiggPaginator
+from django.core.paginator import Paginator as DiggPaginator
 from haystack.forms import ModelSearchForm
 from haystack.query import SearchQuerySet
 
