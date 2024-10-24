@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import importlib
 import re
 
-from django.core.exceptions import ImproperlyConfigured
+from django.core.exceptions import ImproperlyConfigured, FieldDoesNotExist
 from django.db import models
 from django.utils.encoding import force_str
 
@@ -122,7 +122,7 @@ def get_field_value(obj, name):
 
     try:
         obj._meta.get_field(name)
-    except (AttributeError, models.FieldDoesNotExist):
+    except (AttributeError, FieldDoesNotExist):
         # we catch attribute error because obj will not always be a model
         # specially when going through multiple relationships.
         value = getattr(obj, name, None) or ''
